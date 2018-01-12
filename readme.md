@@ -14,6 +14,10 @@ This library exposes a `CacheControl` class and two shortcut methods: `parse()` 
 
 `parse()` takes `Cache-Control` HTTP header value and returns a `CacheControl` instance.
 
+```js
+const {parse} = require('cachecontrol')
+```
+
 For example, `parse('max-age=31536000, public')` will return
 
 ```js
@@ -36,12 +40,25 @@ CacheControl {
 
 ### format(cacheControl)
 
+```js
+const {format} = require('cachecontrol')
+```
+
 `format()` takes a `CacheControl` instance (or similar object) and returns a `Cache-Control` HTTP header value.
 
 For example, `format({maxAge: 31536000, public: true})` will return
 
 ```js
 max-age=31536000, public
+```
+
+## Example usage
+
+```js
+res.setHeader('Cache-Control', format({
+  public: true,
+  immutable: true
+}))
 ```
 
 ## License
