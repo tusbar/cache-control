@@ -1,12 +1,12 @@
 {
-  "name": "cachecontrol",
+  "name": "@tusbar/cache-control",
   "version": "0.1.0",
   "description": "Format and parse HTTP Cache-Control header",
   "main": "index.js",
   "scripts": {
     "test": "xo"
   },
-  "repository": "https://github.com/tusbar/cachecontrol",
+  "repository": "https://github.com/tusbar/cache-control",
   "author": "Bertrand Marron <bertrand.marron@gmail.com>",
   "license": "MIT",
   "devDependencies": {
