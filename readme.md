@@ -12,11 +12,11 @@ This library exposes a `CacheControl` class and two shortcut methods: `parse()` 
 
 ### parse(header)
 
-`parse()` takes `Cache-Control` HTTP header value and returns a `CacheControl` instance.
-
 ```js
 const {parse} = require('cachecontrol')
 ```
+
+`parse()` takes `Cache-Control` HTTP header value and returns a `CacheControl` instance.
 
 For example, `parse('max-age=31536000, public')` will return
 
