@@ -19,7 +19,7 @@ This library exposes a `CacheControl` class and two shortcut methods: `parse()` 
 ### parse(header)
 
 ```js
-const {parse} = require('cachecontrol')
+const {parse} = require('@tusbar/cache-control')
 ```
 
 `parse()` takes `Cache-Control` HTTP header value and returns a `CacheControl` instance.
@@ -47,7 +47,7 @@ CacheControl {
 ### format(cacheControl)
 
 ```js
-const {format} = require('cachecontrol')
+const {format} = require('@tusbar/cache-control')
 ```
 
 `format()` takes a `CacheControl` instance (or similar object) and returns a `Cache-Control` HTTP header value.
