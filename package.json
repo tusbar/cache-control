@@ -1,0 +1,24 @@
+{
+  "name": "cachecontrol",
+  "version": "0.1.0",
+  "description": "Format and parse HTTP Cache-Control header",
+  "main": "dist/cachecontrol.js",
+  "browser": "dist/cachecontrol.umd.js",
+  "module": "dist/cachecontrol.es.js",
+  "scripts": {
+    "build": "microbundle",
+    "prepublish": "npm run build",
+    "test": "xo"
+  },
+  "repository": "https://github.com/tusbar/cachecontrol",
+  "author": "Bertrand Marron <bertrand.marron@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.2.4",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2
+  }
+}
