@@ -1,4 +1,4 @@
-# cache-control
+# cache-control [![CircleCI](https://circleci.com/gh/tusbar/cache-control.svg?style=svg)](https://circleci.com/gh/tusbar/cache-control)
 
 [![npm version](https://img.shields.io/npm/v/@tusbar/cache-control.svg)](https://www.npmjs.com/package/@tusbar/cache-control)
 [![dependencies Status](https://david-dm.org/tusbar/cachecontrol/status.svg)](https://david-dm.org/tusbar/cachecontrol)
