@@ -5,13 +5,21 @@
   "description": "Format and parse HTTP Cache-Control header",
   "main": "index.js",
   "scripts": {
-    "test": "xo"
+    "test": "xo && nyc ava"
   },
   "repository": "https://github.com/tusbar/cache-control",
   "author": "Bertrand Marron <bertrand.marron@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^0.24.0",
+    "nyc": "^11.4.1",
     "xo": "^0.18.2"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
   },
   "xo": {
     "semicolon": false,
