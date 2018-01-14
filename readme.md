@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@tusbar/cache-control.svg)](https://www.npmjs.com/package/@tusbar/cache-control)
 [![dependencies Status](https://david-dm.org/tusbar/cachecontrol/status.svg)](https://david-dm.org/tusbar/cachecontrol)
+[![codecov](https://codecov.io/gh/tusbar/cache-control/branch/master/graph/badge.svg)](https://codecov.io/gh/tusbar/cache-control)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 > Format and parse HTTP Cache-Control header
