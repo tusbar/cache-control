@@ -53,8 +53,12 @@ class CacheControl {
   }
 
   parse(header) {
+    if (!header || header.length === 0) {
+      return this
+    }
+
     const values = {}
-    const matches = (header || '').match(HEADER_REGEXP) || []
+    const matches = header.match(HEADER_REGEXP) || []
 
     Array.prototype.forEach.call(matches, match => {
       const tokens = match.split('=', 2)

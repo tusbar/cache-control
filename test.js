@@ -48,8 +48,20 @@ test('default object properties should all be null', t => {
   t.deepEqual(toPlainObject(cc), DEFAULT_UNSET)
 })
 
-test('parse: empty header value should disable everything', t => {
+test('parse: unset header value should return a default instance', t => {
   const cc = parse()
+
+  t.deepEqual(toPlainObject(cc), DEFAULT_UNSET)
+})
+
+test('parse: empty header value should return a default instance', t => {
+  const cc = parse('')
+
+  t.deepEqual(toPlainObject(cc), DEFAULT_UNSET)
+})
+
+test('parse: invalid header value should not enable anything', t => {
+  const cc = parse('∂')
 
   t.deepEqual(toPlainObject(cc), DEFAULT_EMPTY)
 })
