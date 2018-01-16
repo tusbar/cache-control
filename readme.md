@@ -17,7 +17,7 @@ $ npm install @tusbar/cache-control
 
 This library exposes a `CacheControl` class and two shortcut methods: `parse()` and `format()`.
 
-### parse(header)
+### `parse(header)`
 
 ```js
 const {parse} = require('@tusbar/cache-control')
@@ -45,7 +45,7 @@ CacheControl {
   public: true }
 ```
 
-### format(cacheControl)
+### `format(cacheControl)`
 
 ```js
 const {format} = require('@tusbar/cache-control')
@@ -67,6 +67,17 @@ res.setHeader('Cache-Control', format({
   immutable: true
 }))
 ```
+
+## FAQ
+
+**Why another cache-control library?**<br />
+None of the existing libraries focus on just parsing the `Cache-Control` headers. There are some that expose Express (or connect-like) middlewares, and some unmaintained other ones that do rudimentary parsing of the header. The idea of this module is to parse the header according to the RFC with no further analyze or integration.
+
+
+## See also
+
+- [`cachecontrol`](https://github.com/pquerna/cachecontrol): Golang HTTP Cache-Control Parser and Interpretation
+
 
 ## License
 
