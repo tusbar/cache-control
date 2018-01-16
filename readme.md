@@ -70,8 +70,9 @@ res.setHeader('Cache-Control', format({
 
 ## FAQ
 
-**Why another cache-control library?**<br />
-None of the existing libraries focus on just parsing the `Cache-Control` headers. There are some that expose Express (or connect-like) middlewares, and some unmaintained other ones that do rudimentary parsing of the header. The idea of this module is to parse the header according to the RFC with no further analyze or integration.
+**Why another cache-control library?**
+
+None of the existing libraries focus on just parsing the `Cache-Control` headers. There are some that expose Express (or connect-like) middlewares, and some unmaintained other ones that do rudimentary parsing of the header. The idea of this module is to parse the header according to the RFC with no further analysis or integration.
 
 
 ## See also
