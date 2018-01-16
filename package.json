@@ -7,6 +7,11 @@
   "scripts": {
     "test": "nyc ava"
   },
+  "keywords": [
+    "cache-control",
+    "http",
+    "rfc7234"
+  ],
   "repository": "https://github.com/tusbar/cache-control",
   "author": "Bertrand Marron <bertrand.marron@gmail.com>",
   "license": "MIT",
