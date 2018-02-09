@@ -83,3 +83,16 @@ None of the existing libraries focus on just parsing the `Cache-Control` headers
 ## License
 
 MIT
+
+
+## Miscellaneous
+
+```
+    ╚⊙ ⊙╝
+  ╚═(███)═╝
+ ╚═(███)═╝
+╚═(███)═╝
+ ╚═(███)═╝
+  ╚═(███)═╝
+   ╚═(███)═╝
+```
