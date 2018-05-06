@@ -63,7 +63,7 @@ class CacheControl {
     Array.prototype.forEach.call(matches, match => {
       const tokens = match.split('=', 2)
 
-      const key = tokens[0]
+      const [key] = tokens
       let value = null
 
       if (tokens.length > 1) {
