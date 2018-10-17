@@ -167,7 +167,7 @@ test('format: should format durations', t => {
     minFresh: 4444
   })
 
-  t.is(cc, 'max-age=4242, s-max-age=4343, min-fresh=4444')
+  t.is(cc, 'max-age=4242, s-maxage=4343, min-fresh=4444')
 })
 
 test('format: should format booleans', t => {
