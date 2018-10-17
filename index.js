@@ -2,7 +2,7 @@ const HEADER_REGEXP = /([a-zA-Z][a-zA-Z_-]*)\s*(?:=(?:"([^"]*)"|([^ \t",;]*)))?/
 
 const STRINGS = {
   maxAge: 'max-age',
-  sharedMaxAge: 's-max-age',
+  sharedMaxAge: 's-maxage',
   maxStale: 'max-stale',
   minFresh: 'min-fresh',
   immutable: 'immutable',
