@@ -1,3 +1,18 @@
-.nyc_output/
-node_modules/
-coverage/
+# Logs
+*.log
+npm-debug.log*
+CHANGELOG.md
+
+# Cache
+.yarn-cache
+.npm
+.eslintcache
+.changelog
+.nyc_output
+
+# Node
+node_modules
+
+# Reports
+coverage
+reports
