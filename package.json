@@ -18,6 +18,7 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "codecov": "^3.0.0",
+    "lerna-changelog": "0.8.0",
     "nyc": "^13.1.0",
     "xo": "^0.23.0"
   },
@@ -30,5 +31,18 @@
   "xo": {
     "semicolon": false,
     "space": 2
+  },
+  "changelog": {
+    "cacheDir": ".changelog",
+    "labels": {
+      "bug": ":bug: Bug Fix",
+      "build": ":building_construction: Build Process",
+      "cleanup": ":shower: Cleanup",
+      "documentation": ":memo: Documentation",
+      "enhancement": ":rocket: Enhancement",
+      "performance": ":racehorse: Performance",
+      "security": ":policeman: Security"
+    },
+    "repo": "tusbar/cache-control"
   }
 }
