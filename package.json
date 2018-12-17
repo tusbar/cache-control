@@ -16,7 +16,7 @@
   "author": "Bertrand Marron <bertrand.marron@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.25.0",
+    "ava": "^1.0.1",
     "codecov": "^3.0.0",
     "lerna-changelog": "0.8.2",
     "nyc": "^13.1.0",
