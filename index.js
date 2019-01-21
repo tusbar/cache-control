@@ -169,6 +169,7 @@ function format(cc) {
   if (!(cc instanceof CacheControl)) {
     return CacheControl.prototype.format.call(cc)
   }
+
   return cc.format()
 }
 
