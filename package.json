@@ -12,6 +12,9 @@
     "http",
     "rfc7234"
   ],
+  "files": [
+    "index.js"
+  ],
   "repository": "https://github.com/tusbar/cache-control",
   "author": "Bertrand Marron <bertrand.marron@gmail.com>",
   "license": "MIT",
