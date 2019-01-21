@@ -1,11 +1,11 @@
 # cache-control [![CircleCI](https://circleci.com/gh/tusbar/cache-control.svg?style=svg)](https://circleci.com/gh/tusbar/cache-control)
 
+> Format and parse HTTP Cache-Control header
+
 [![npm version](https://badgen.net/npm/v/@tusbar/cache-control)](https://www.npmjs.com/package/@tusbar/cache-control)
 [![dependencies Status](https://badgen.net/david/dep/tusbar/cache-control)](https://david-dm.org/tusbar/cache-control)
 [![codecov](https://badgen.net/codecov/c/github/tusbar/cache-control)](https://codecov.io/gh/tusbar/cache-control)
 [![XO code style](https://badgen.net/badge/code%20style/XO/cyan)](https://github.com/xojs/xo)
-
-> Format and parse HTTP Cache-Control header
 
 ## Getting started
 
