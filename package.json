@@ -20,7 +20,7 @@
     "codecov": "^3.0.0",
     "lerna-changelog": "0.8.2",
     "nyc": "^13.1.0",
-    "xo": "^0.23.0"
+    "xo": "^0.24.0"
   },
   "nyc": {
     "reporter": [
