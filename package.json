@@ -21,7 +21,7 @@
   "devDependencies": {
     "ava": "^2.0.0",
     "codecov": "^3.0.0",
-    "lerna-changelog": "0.8.2",
+    "lerna-changelog": "0.8.3",
     "nyc": "^14.0.0",
     "xo": "^0.25.3"
   },
