@@ -121,6 +121,18 @@ test('parse: max-stale should ignore invalid values', t => {
   t.deepEqual(toPlainObject(cc), DEFAULT_EMPTY)
 })
 
+test('parse: should include 0 duration values', t => {
+  const cc = parse('max-age=0, s-maxage=0, max-stale=0, min-fresh=0')
+
+  t.deepEqual(toPlainObject(cc), {
+    ...DEFAULT_EMPTY,
+    maxAge: 0,
+    sharedMaxAge: 0,
+    maxStaleDuration: 0,
+    minFresh: 0
+  })
+})
+
 test('parse: should parse common headers (1)', t => {
   const cc = parse('no-cache, no-store, must-revalidate')
 
@@ -202,4 +214,17 @@ test('format: max-stale duration should be included if maxStale is true', t => {
   })
 
   t.is(cc, 'max-stale=4242')
+})
+
+test('format: should include zero duration values', t => {
+  const cc = format({
+    maxAge: 0,
+    sharedMaxAge: 0,
+    public: true,
+    maxStale: true,
+    maxStaleDuration: 0,
+    minFresh: 0
+  })
+
+  t.is(cc, 'max-age=0, s-maxage=0, max-stale=0, min-fresh=0, public')
 })
