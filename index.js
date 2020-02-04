@@ -100,23 +100,23 @@ class CacheControl {
   format() {
     const tokens = []
 
-    if (this.maxAge) {
+    if (typeof this.maxAge === 'number') {
       tokens.push(`${STRINGS.maxAge}=${this.maxAge}`)
     }
 
-    if (this.sharedMaxAge) {
+    if (typeof this.sharedMaxAge === 'number') {
       tokens.push(`${STRINGS.sharedMaxAge}=${this.sharedMaxAge}`)
     }
 
     if (this.maxStale) {
-      if (this.maxStaleDuration) {
+      if (typeof this.maxStaleDuration === 'number') {
         tokens.push(`${STRINGS.maxStale}=${this.maxStaleDuration}`)
       } else {
         tokens.push(STRINGS.maxStale)
       }
     }
 
-    if (this.minFresh) {
+    if (typeof this.minFresh === 'number') {
       tokens.push(`${STRINGS.minFresh}=${this.minFresh}`)
     }
 
