@@ -1,5 +1,5 @@
-import test from 'ava'
-import {CacheControl, parse, format} from '.'
+const test = require('ava')
+const {CacheControl, parse, format} = require('.')
 
 function toPlainObject(cc) {
   return Object.entries(cc).reduce((o, [k, v]) => {
