@@ -42,7 +42,8 @@ CacheControl {
   onlyIfCached: false,
   private: false,
   proxyRevalidate: false,
-  public: true }
+  public: true,
+  staleWhileRevalidate: null }
 ```
 
 ### `format(cacheControl)`
