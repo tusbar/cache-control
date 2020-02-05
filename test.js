@@ -22,7 +22,8 @@ const DEFAULT_UNSET = {
   private: null,
   proxyRevalidate: null,
   public: null,
-  sharedMaxAge: null
+  sharedMaxAge: null,
+  staleWhileRevalidate: null
 }
 
 const DEFAULT_EMPTY = {
@@ -39,7 +40,8 @@ const DEFAULT_EMPTY = {
   private: false,
   proxyRevalidate: false,
   public: false,
-  sharedMaxAge: null
+  sharedMaxAge: null,
+  staleWhileRevalidate: null
 }
 
 test('default object properties should all be null', t => {
@@ -122,14 +124,15 @@ test('parse: max-stale should ignore invalid values', t => {
 })
 
 test('parse: should include 0 duration values', t => {
-  const cc = parse('max-age=0, s-maxage=0, max-stale=0, min-fresh=0')
+  const cc = parse('max-age=0, s-maxage=0, max-stale=0, min-fresh=0, stale-while-revalidate=0')
 
   t.deepEqual(toPlainObject(cc), {
     ...DEFAULT_EMPTY,
     maxAge: 0,
     sharedMaxAge: 0,
     maxStaleDuration: 0,
-    minFresh: 0
+    minFresh: 0,
+    staleWhileRevalidate: 0
   })
 })
 
@@ -176,10 +179,11 @@ test('format: should format durations', t => {
   const cc = format({
     maxAge: 4242,
     sharedMaxAge: 4343,
-    minFresh: 4444
+    minFresh: 4444,
+    staleWhileRevalidate: 4545
   })
 
-  t.is(cc, 'max-age=4242, s-maxage=4343, min-fresh=4444')
+  t.is(cc, 'max-age=4242, s-maxage=4343, min-fresh=4444, stale-while-revalidate=4545')
 })
 
 test('format: should format booleans', t => {
@@ -223,8 +227,9 @@ test('format: should include zero duration values', t => {
     public: true,
     maxStale: true,
     maxStaleDuration: 0,
-    minFresh: 0
+    minFresh: 0,
+    staleWhileRevalidate: 0
   })
 
-  t.is(cc, 'max-age=0, s-maxage=0, max-stale=0, min-fresh=0, public')
+  t.is(cc, 'max-age=0, s-maxage=0, max-stale=0, min-fresh=0, public, stale-while-revalidate=0')
 })
