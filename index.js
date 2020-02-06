@@ -13,7 +13,8 @@ const STRINGS = {
   onlyIfCached: 'only-if-cached',
   private: 'private',
   proxyRevalidate: 'proxy-revalidate',
-  public: 'public'
+  public: 'public',
+  staleWhileRevalidate: 'stale-while-revalidate'
 }
 
 function parseBooleanOnly(value) {
@@ -50,6 +51,7 @@ class CacheControl {
     this.private = null
     this.proxyRevalidate = null
     this.public = null
+    this.staleWhileRevalidate = null
   }
 
   parse(header) {
@@ -93,6 +95,7 @@ class CacheControl {
     this.private = parseBooleanOnly(values[STRINGS.private])
     this.proxyRevalidate = parseBooleanOnly(values[STRINGS.proxyRevalidate])
     this.public = parseBooleanOnly(values[STRINGS.public])
+    this.staleWhileRevalidate = parseDuration(values[STRINGS.staleWhileRevalidate])
 
     return this
   }
@@ -154,6 +157,10 @@ class CacheControl {
 
     if (this.public) {
       tokens.push(STRINGS.public)
+    }
+
+    if (typeof this.staleWhileRevalidate === 'number') {
+      tokens.push(`${STRINGS.staleWhileRevalidate}=${this.staleWhileRevalidate}`)
     }
 
     return tokens.join(', ')
