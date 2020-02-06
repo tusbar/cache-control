@@ -182,7 +182,10 @@ workflows:
       - changelog:
           requires:
             - install
-          filters: *default_filters
+          filters:
+            <<: *default_filters
+            branches:
+              only: master
 
       - release:
           requires:
