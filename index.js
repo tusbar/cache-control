@@ -26,7 +26,7 @@ function parseDuration(value) {
     return null
   }
 
-  const duration = parseInt(value, 10)
+  const duration = Number.parseInt(value, 10)
 
   if (!Number.isFinite(duration) || duration < 0) {
     return null
