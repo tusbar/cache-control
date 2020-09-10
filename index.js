@@ -14,7 +14,8 @@ const STRINGS = {
   private: 'private',
   proxyRevalidate: 'proxy-revalidate',
   public: 'public',
-  staleWhileRevalidate: 'stale-while-revalidate'
+  staleWhileRevalidate: 'stale-while-revalidate',
+  staleIfError: 'stale-if-error'
 }
 
 function parseBooleanOnly(value) {
@@ -52,6 +53,7 @@ class CacheControl {
     this.proxyRevalidate = null
     this.public = null
     this.staleWhileRevalidate = null
+    this.staleIfError = null
   }
 
   parse(header) {
@@ -96,6 +98,7 @@ class CacheControl {
     this.proxyRevalidate = parseBooleanOnly(values[STRINGS.proxyRevalidate])
     this.public = parseBooleanOnly(values[STRINGS.public])
     this.staleWhileRevalidate = parseDuration(values[STRINGS.staleWhileRevalidate])
+    this.staleIfError = parseDuration(values[STRINGS.staleIfError])
 
     return this
   }
@@ -161,6 +164,10 @@ class CacheControl {
 
     if (typeof this.staleWhileRevalidate === 'number') {
       tokens.push(`${STRINGS.staleWhileRevalidate}=${this.staleWhileRevalidate}`)
+    }
+
+    if (typeof this.staleIfError === 'number') {
+      tokens.push(`${STRINGS.staleIfError}=${this.staleIfError}`)
     }
 
     return tokens.join(', ')
