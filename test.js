@@ -23,8 +23,8 @@ const DEFAULT_UNSET = {
   proxyRevalidate: null,
   public: null,
   sharedMaxAge: null,
-  staleWhileRevalidate: null,
-  staleIfError: null
+  staleIfError: null,
+  staleWhileRevalidate: null
 }
 
 const DEFAULT_EMPTY = {
@@ -42,8 +42,8 @@ const DEFAULT_EMPTY = {
   proxyRevalidate: false,
   public: false,
   sharedMaxAge: null,
-  staleWhileRevalidate: null,
-  staleIfError: null
+  staleIfError: null,
+  staleWhileRevalidate: null
 }
 
 test('default object properties should all be null', t => {
