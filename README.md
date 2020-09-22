@@ -43,6 +43,7 @@ CacheControl {
   private: false,
   proxyRevalidate: false,
   public: true,
+  staleIfError: null,
   staleWhileRevalidate: null }
 ```
 
