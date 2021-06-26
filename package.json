@@ -31,6 +31,7 @@
       "text"
     ]
   },
+  "types": "./index.d.ts",
   "xo": {
     "semicolon": false,
     "space": 2,
