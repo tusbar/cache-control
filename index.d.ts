@@ -22,7 +22,7 @@ declare interface ICacheControl {
  * by the string.
  * @param header The string to parse
  * @returns The JavaScript value or object described
- */
+*/
 declare function parse(header: string): ICacheControl
 
 /**
@@ -30,7 +30,7 @@ declare function parse(header: string): ICacheControl
  * by the string.
  * @param header The string to parse
  * @returns The JavaScript value or object described
- */
+*/
 declare function format(cc: ICacheControl): string
 
 export { parse, format }
