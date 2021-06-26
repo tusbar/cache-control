@@ -33,4 +33,4 @@ declare function parse(header: string): ICacheControl
 */
 declare function format(cc: ICacheControl): string
 
-export { parse, format }
+export { ICacheControl, parse, format }
