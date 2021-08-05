@@ -21,7 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "ava": "^3.2.0",
-    "codecov": "^3.0.0",
+    "codecov": "^3.8.3",
     "lerna-changelog": "1.0.1",
     "nyc": "^15.0.0",
     "xo": "^0.39.1"
