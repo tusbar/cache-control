@@ -15,7 +15,7 @@ const STRINGS = {
   proxyRevalidate: 'proxy-revalidate',
   public: 'public',
   staleWhileRevalidate: 'stale-while-revalidate',
-  staleIfError: 'stale-if-error'
+  staleIfError: 'stale-if-error',
 }
 
 function parseBooleanOnly(value) {
@@ -190,5 +190,5 @@ function format(cc) {
 module.exports = {
   CacheControl,
   parse,
-  format
+  format,
 }

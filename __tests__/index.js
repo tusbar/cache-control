@@ -16,7 +16,7 @@ const DEFAULT_UNSET = {
   public: null,
   sharedMaxAge: null,
   staleIfError: null,
-  staleWhileRevalidate: null
+  staleWhileRevalidate: null,
 }
 
 const DEFAULT_EMPTY = {
@@ -35,7 +35,7 @@ const DEFAULT_EMPTY = {
   public: false,
   sharedMaxAge: null,
   staleIfError: null,
-  staleWhileRevalidate: null
+  staleWhileRevalidate: null,
 }
 
 describe('index', () => {
@@ -69,7 +69,7 @@ describe('index', () => {
       const cc = parse('max-age=4242')
       expect(cc).toEqual({
         ...DEFAULT_EMPTY,
-        maxAge: 4242
+        maxAge: 4242,
       })
     })
 
@@ -82,7 +82,7 @@ describe('index', () => {
       const cc = parse('immutable')
       expect(cc).toEqual({
         ...DEFAULT_EMPTY,
-        immutable: true
+        immutable: true,
       })
     })
 
@@ -90,7 +90,7 @@ describe('index', () => {
       const cc = parse('max-stale')
       expect(cc).toEqual({
         ...DEFAULT_EMPTY,
-        maxStale: true
+        maxStale: true,
       })
     })
 
@@ -99,7 +99,7 @@ describe('index', () => {
       expect(cc).toEqual({
         ...DEFAULT_EMPTY,
         maxStale: true,
-        maxStaleDuration: 24
+        maxStaleDuration: 24,
       })
     })
 
@@ -117,7 +117,7 @@ describe('index', () => {
         maxStaleDuration: 0,
         minFresh: 0,
         staleWhileRevalidate: 0,
-        staleIfError: 0
+        staleIfError: 0,
       })
     })
 
@@ -127,7 +127,7 @@ describe('index', () => {
         ...DEFAULT_EMPTY,
         noCache: true,
         noStore: true,
-        mustRevalidate: true
+        mustRevalidate: true,
       })
     })
 
@@ -136,7 +136,7 @@ describe('index', () => {
       expect(cc).toEqual({
         ...DEFAULT_EMPTY,
         public: true,
-        maxAge: 31536000
+        maxAge: 31_536_000,
       })
     })
   })
@@ -163,7 +163,7 @@ describe('index', () => {
         sharedMaxAge: 4343,
         minFresh: 4444,
         staleWhileRevalidate: 4545,
-        staleIfError: 4546
+        staleIfError: 4546,
       })
       expect(cc).toBe('max-age=4242, s-maxage=4343, min-fresh=4444, stale-while-revalidate=4545, stale-if-error=4546')
     })
@@ -179,14 +179,14 @@ describe('index', () => {
         onlyIfCached: true,
         private: true,
         proxyRevalidate: true,
-        public: true
+        public: true,
       })
       expect(cc).toBe('max-stale, immutable, must-revalidate, no-cache, no-store, no-transform, only-if-cached, private, proxy-revalidate, public')
     })
 
     it('should not include max-stale duration if maxStale is not true', () => {
       const cc = format({
-        maxStaleDuration: 4242
+        maxStaleDuration: 4242,
       })
       expect(cc).toBe('')
     })
@@ -194,7 +194,7 @@ describe('index', () => {
     it('should include max-stale duration if maxStale is true', () => {
       const cc = format({
         maxStale: true,
-        maxStaleDuration: 4242
+        maxStaleDuration: 4242,
       })
       expect(cc).toBe('max-stale=4242')
     })
@@ -208,7 +208,7 @@ describe('index', () => {
         maxStaleDuration: 0,
         minFresh: 0,
         staleWhileRevalidate: 0,
-        staleIfError: 0
+        staleIfError: 0,
       })
       expect(cc).toBe('max-age=0, s-maxage=0, max-stale=0, min-fresh=0, public, stale-while-revalidate=0, stale-if-error=0')
     })
