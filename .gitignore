@@ -8,11 +8,10 @@ CHANGELOG.md
 .npm
 .eslintcache
 .changelog
-.nyc_output
 
 # Node
 node_modules
 
 # Reports
-coverage
-reports
+coverage/
+reports/
