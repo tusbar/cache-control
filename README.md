@@ -1,4 +1,4 @@
-# cache-control [![CircleCI](https://circleci.com/gh/tusbar/cache-control.svg?style=svg)](https://circleci.com/gh/tusbar/cache-control)
+# cache-control
 
 > Format and parse HTTP Cache-Control header
 
@@ -6,6 +6,11 @@
 [![dependencies Status](https://badgen.net/david/dep/tusbar/cache-control)](https://david-dm.org/tusbar/cache-control)
 [![codecov](https://badgen.net/codecov/c/github/tusbar/cache-control)](https://codecov.io/gh/tusbar/cache-control)
 [![XO code style](https://badgen.net/badge/code%20style/XO/cyan)](https://github.com/xojs/xo)
+
+## CI
+
+[![Tests](https://github.com/tusbar/cache-control/actions/workflows/tests.yml/badge.svg)](https://github.com/tusbar/cache-control/actions/workflows/tests.yml)
+[![Release](https://github.com/tusbar/cache-control/actions/workflows/release.yml/badge.svg)](https://github.com/tusbar/cache-control/actions/workflows/release.yml)
 
 ## Getting started
 
