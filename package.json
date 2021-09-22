@@ -3,9 +3,10 @@
   "public": true,
   "version": "0.6.0",
   "description": "Format and parse HTTP Cache-Control header",
-  "main": "index.js",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "scripts": {
-    "test": "nyc ava"
+    "test": "jest"
   },
   "keywords": [
     "cache-control",
@@ -20,25 +21,39 @@
   "author": "Bertrand Marron <bertrand.marron@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^3.2.0",
     "codecov": "^3.8.3",
+    "jest": "^27.2.1",
     "lerna-changelog": "1.0.1",
-    "nyc": "^15.0.0",
     "xo": "^0.39.1"
   },
-  "nyc": {
-    "reporter": [
+  "jest": {
+    "testMatch": [
+      "<rootDir>/__tests__/*.js"
+    ],
+    "transform": {},
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "index.js"
+    ],
+    "coverageReporters": [
       "lcov",
-      "text"
+      "text-summary"
     ]
   },
-  "types": "./index.d.ts",
   "xo": {
     "semicolon": false,
     "space": 2,
     "rules": {
       "unicorn/no-array-reduce": "off"
-    }
+    },
+    "overrides": [
+      {
+        "files": "__tests__/*.js",
+        "envs": [
+          "jest"
+        ]
+      }
+    ]
   },
   "changelog": {
     "cacheDir": ".changelog",
