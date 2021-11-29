@@ -1,7 +1,7 @@
 {
   "name": "@tusbar/cache-control",
   "public": true,
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Format and parse HTTP Cache-Control header",
   "main": "./index.js",
   "types": "./index.d.ts",
