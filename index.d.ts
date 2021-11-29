@@ -5,7 +5,7 @@
  *
  * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
  */
- declare interface ICacheControl {
+declare interface ICacheControl {
   /**
    * The max-age=N response directive indicates that the response
    * remains fresh until N seconds after the response is generated.
@@ -321,7 +321,7 @@
  * @param header The string to parse
  * @returns The JavaScript value or object described
  */
-declare function parse(header: string): ICacheControl;
+declare function parse(header: string): ICacheControl
 
 /**
  * Formats a Cache Control Header, constructing string from JavaScript
@@ -330,6 +330,6 @@ declare function parse(header: string): ICacheControl;
  * @param header The string to parse
  * @returns The JavaScript value or object described
  */
-declare function format(cc: ICacheControl): string;
+declare function format(cc: ICacheControl): string
 
-export { ICacheControl, parse, format };
+export {ICacheControl, parse, format}
