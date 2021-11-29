@@ -24,7 +24,7 @@
     "@bizon/semantic-release-config": "^1.1.0",
     "jest": "^27.4.0",
     "jest-junit": "^12.3.0",
-    "semantic-release": "^18.0.0",
+    "semantic-release": "^18.0.1",
     "xo": "^0.44.0"
   },
   "jest": {
