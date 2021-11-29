@@ -5,7 +5,7 @@
  *
  * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
  */
-declare interface ICacheControl {
+export declare class CacheControl {
   /**
    * The max-age=N response directive indicates that the response
    * remains fresh until N seconds after the response is generated.
@@ -31,7 +31,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#max-age
    */
-  maxAge?: number | null;
+  maxAge?: number | null
   /**
    * The s-maxage response directive also indicates how long the
    * response is fresh for (similar to max-age) — but it is specific
@@ -43,7 +43,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#s-maxage
    */
-  sharedMaxAge?: number | null;
+  sharedMaxAge?: number | null
   /**
    * The max-stale=N request directive indicates that the client
    * allows a stored response that is stale within N seconds.
@@ -64,7 +64,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#max-stale
    */
-  maxStale?: boolean | null;
+  maxStale?: boolean | null
   /**
    * The max-stale=N request directive indicates that the client
    * allows a stored response that is stale within N seconds.
@@ -85,7 +85,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#max-stale
    */
-  maxStaleDuration?: number | null;
+  maxStaleDuration?: number | null
   /**
    * The min-fresh=N request directive indicates that the client
    * allows a stored response that is fresh for at least N seconds.
@@ -106,7 +106,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#min-fresh
    */
-  minFresh?: number | null;
+  minFresh?: number | null
   /**
    * The immutable response directive indicates that the response will
    * not be updated while it's fresh.
@@ -138,7 +138,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#immutable
    */
-  immutable?: boolean | null;
+  immutable?: boolean | null
   /**
    * The must-revalidate response directive indicates that the
    * response can be stored in caches and can be reused while fresh.
@@ -159,7 +159,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#must-revalidate
    */
-  mustRevalidate?: boolean | null;
+  mustRevalidate?: boolean | null
   /**
    * The no-cache response directive indicates that the response can
    * be stored in caches, but must be validated with the origin server
@@ -182,7 +182,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#no-cache
    */
-  noCache?: boolean | null;
+  noCache?: boolean | null
   /**
    * The no-store response directive indicates that any caches of any
    * kind (private or shared) should not store this response.
@@ -193,7 +193,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#no-store
    */
-  noStore?: boolean | null;
+  noStore?: boolean | null
   /**
    * Some intermediaries transform content for various reasons. For
    * example, some convert images to reduce transfer size. In some
@@ -204,14 +204,14 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#no-transform
    */
-  noTransform?: boolean | null;
+  noTransform?: boolean | null
   /**
    * The client indicates that cache should obtain an already-cached
    * response. If a cache has stored a response, it’s reused.
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#only-if-cached
    */
-  onlyIfCached?: boolean | null;
+  onlyIfCached?: boolean | null
   /**
    * The private response directive indicates that the response can be
    * stored only in a private cache (e.g. local caches in browsers).
@@ -231,14 +231,14 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#private
    */
-  private?: boolean | null;
+  private?: boolean | null
   /**
    * The proxy-revalidate response directive is the equivalent of
    * must-revalidate, but specifically for shared caches only.
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#proxy-revalidate
    */
-  proxyRevalidate?: boolean | null;
+  proxyRevalidate?: boolean | null
   /**
    * Responses for requests with Authorization header fields must not
    * be stored in a shared cache. But the public directive will cause
@@ -268,7 +268,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#public
    */
-  public?: boolean | null;
+  public?: boolean | null
   /**
    * The stale-while-revalidate response directive indicates that the
    * cache could reuse a stale response while it revalidates it to a cache.
@@ -291,7 +291,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#stale-while-revalidate
    */
-  staleWhileRevalidate?: number | null;
+  staleWhileRevalidate?: number | null
   /**
    * The stale-if-error response directive indicates that the cache
    * can reuse a stale response when an origin server responds with an
@@ -311,7 +311,7 @@ declare interface ICacheControl {
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#stale-if-error
    */
-  staleIfError?: number | null;
+  staleIfError?: number | null
 }
 
 /**
@@ -321,7 +321,7 @@ declare interface ICacheControl {
  * @param header The string to parse
  * @returns The JavaScript value or object described
  */
-declare function parse(header: string): ICacheControl
+export declare function parse(header: string): CacheControl
 
 /**
  * Formats a Cache Control Header, constructing string from JavaScript
@@ -330,6 +330,4 @@ declare function parse(header: string): ICacheControl
  * @param header The string to parse
  * @returns The JavaScript value or object described
  */
-declare function format(cc: ICacheControl): string
-
-export {ICacheControl, parse, format}
+declare function format(cc: CacheControl): string
