@@ -44,6 +44,7 @@
   "xo": {
     "semicolon": false,
     "space": 2,
+    "prettier": true,
     "rules": {
       "unicorn/no-array-reduce": "off",
       "unicorn/prefer-module": "off"
@@ -56,6 +57,9 @@
         ]
       }
     ]
+  },
+  "prettier": {
+    "printWidth": 100
   },
   "release": {
     "extends": "@bizon/semantic-release-config"
