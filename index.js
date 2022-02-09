@@ -64,7 +64,7 @@ class CacheControl {
     const values = {}
     const matches = header.match(HEADER_REGEXP) || []
 
-    Array.prototype.forEach.call(matches, match => {
+    Array.prototype.forEach.call(matches, (match) => {
       const tokens = match.split('=', 2)
 
       const [key] = tokens

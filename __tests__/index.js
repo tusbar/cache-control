@@ -109,7 +109,9 @@ describe('index', () => {
     })
 
     it('should include 0 duration values', () => {
-      const cc = parse('max-age=0, s-maxage=0, max-stale=0, min-fresh=0, stale-while-revalidate=0, stale-if-error=0')
+      const cc = parse(
+        'max-age=0, s-maxage=0, max-stale=0, min-fresh=0, stale-while-revalidate=0, stale-if-error=0',
+      )
       expect(cc).toEqual({
         ...DEFAULT_EMPTY,
         maxAge: 0,
@@ -165,7 +167,9 @@ describe('index', () => {
         staleWhileRevalidate: 4545,
         staleIfError: 4546,
       })
-      expect(cc).toBe('max-age=4242, s-maxage=4343, min-fresh=4444, stale-while-revalidate=4545, stale-if-error=4546')
+      expect(cc).toBe(
+        'max-age=4242, s-maxage=4343, min-fresh=4444, stale-while-revalidate=4545, stale-if-error=4546',
+      )
     })
 
     it('should format booleans', () => {
@@ -181,7 +185,9 @@ describe('index', () => {
         proxyRevalidate: true,
         public: true,
       })
-      expect(cc).toBe('max-stale, immutable, must-revalidate, no-cache, no-store, no-transform, only-if-cached, private, proxy-revalidate, public')
+      expect(cc).toBe(
+        'max-stale, immutable, must-revalidate, no-cache, no-store, no-transform, only-if-cached, private, proxy-revalidate, public',
+      )
     })
 
     it('should not include max-stale duration if maxStale is not true', () => {
@@ -210,7 +216,9 @@ describe('index', () => {
         staleWhileRevalidate: 0,
         staleIfError: 0,
       })
-      expect(cc).toBe('max-age=0, s-maxage=0, max-stale=0, min-fresh=0, public, stale-while-revalidate=0, stale-if-error=0')
+      expect(cc).toBe(
+        'max-age=0, s-maxage=0, max-stale=0, min-fresh=0, public, stale-while-revalidate=0, stale-if-error=0',
+      )
     })
   })
 })
