@@ -46,7 +46,6 @@
     "space": 2,
     "prettier": true,
     "rules": {
-      "unicorn/no-array-reduce": "off",
       "unicorn/prefer-module": "off"
     },
     "overrides": [
