@@ -27,7 +27,7 @@ This library exposes a `CacheControl` class and two shortcut methods: `parse()` 
 const {parse} = require('@tusbar/cache-control')
 ```
 
-`parse()` takes `Cache-Control` HTTP header value and returns a `CacheControl` instance.
+`parse()` takes a `Cache-Control` HTTP header value and returns a `CacheControl` instance.
 
 For example, `parse('max-age=31536000, public')` will return
 
