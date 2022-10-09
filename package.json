@@ -22,10 +22,11 @@
   "license": "MIT",
   "devDependencies": {
     "@bizon/semantic-release-config": "^1.2.0",
+    "eslint-config-xo-bizon": "^1.1.1",
     "jest": "^27.5.1",
     "jest-junit": "^13.0.0",
     "semantic-release": "^19.0.2",
-    "xo": "^0.47.0"
+    "xo": "^0.52.4"
   },
   "jest": {
     "testMatch": [
@@ -42,12 +43,10 @@
     ]
   },
   "xo": {
+    "extends": "xo-bizon",
     "semicolon": false,
     "space": 2,
     "prettier": true,
-    "rules": {
-      "unicorn/prefer-module": "off"
-    },
     "overrides": [
       {
         "files": "__tests__/*.js",
