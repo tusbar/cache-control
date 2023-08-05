@@ -1,5 +1,24 @@
 const HEADER_REGEXP = /([a-zA-Z][a-zA-Z_-]*)\s*(?:=(?:"([^"]*)"|([^ \t",;]*)))?/g
 
+interface CacheControlValue {
+  maxAge?: number | null
+  sharedMaxAge?: number | null
+  maxStale?: boolean | null
+  maxStaleDuration?: number | null
+  minFresh?: number | null
+  immutable?: boolean | null
+  mustRevalidate?: boolean | null
+  noCache?: boolean | null
+  noStore?: boolean | null
+  noTransform?: boolean | null
+  onlyIfCached?: boolean | null
+  private?: boolean | null
+  proxyRevalidate?: boolean | null
+  public?: boolean | null
+  staleWhileRevalidate?: number | null
+  staleIfError?: number | null
+}
+
 const STRINGS = {
   maxAge: 'max-age',
   sharedMaxAge: 's-maxage',
@@ -18,16 +37,16 @@ const STRINGS = {
   staleIfError: 'stale-if-error',
 }
 
-function parseBooleanOnly(value) {
+function parseBooleanOnly(value: string | null) {
   return value === null
 }
 
-function parseDuration(value) {
+function parseDuration(value: string | null) {
   if (!value) {
     return null
   }
 
-  const duration = Number.parseInt(value, 10)
+  const duration: number = Number.parseInt(value, 10)
 
   if (!Number.isFinite(duration) || duration < 0) {
     return null
@@ -36,7 +55,24 @@ function parseDuration(value) {
   return duration
 }
 
-class CacheControl {
+class CacheControl implements CacheControlValue {
+  maxAge: number | null
+  sharedMaxAge: number | null
+  maxStale: boolean | null
+  maxStaleDuration: number | null
+  minFresh: number | null
+  immutable: boolean | null
+  mustRevalidate: boolean | null
+  noCache: boolean | null
+  noStore: boolean | null
+  noTransform: boolean | null
+  onlyIfCached: boolean | null
+  private: boolean | null
+  proxyRevalidate: boolean | null
+  public: boolean | null
+  staleWhileRevalidate: number | null
+  staleIfError: number | null
+
   constructor() {
     this.maxAge = null
     this.sharedMaxAge = null
@@ -56,26 +92,20 @@ class CacheControl {
     this.staleIfError = null
   }
 
-  parse(header) {
+  parse(header: string | undefined): this {
     if (!header || header.length === 0) {
       return this
     }
 
-    const values = {}
-    const matches = header.match(HEADER_REGEXP) || []
+    const values: Record<string, string | null> = {}
+    const matches = header.match(HEADER_REGEXP) ?? []
 
-    Array.prototype.forEach.call(matches, (match) => {
-      const tokens = match.split('=', 2)
-
+    for (const match of matches) {
+      const tokens: string[] = match.split('=', 2)
       const [key] = tokens
-      let value = null
 
-      if (tokens.length > 1) {
-        value = tokens[1].trim()
-      }
-
-      values[key.toLowerCase()] = value
-    })
+      values[key.toLowerCase()] = tokens.length > 1 ? tokens[1].trim() : null
+    }
 
     this.maxAge = parseDuration(values[STRINGS.maxAge])
     this.sharedMaxAge = parseDuration(values[STRINGS.sharedMaxAge])
@@ -103,8 +133,8 @@ class CacheControl {
     return this
   }
 
-  format() {
-    const tokens = []
+  format(): string {
+    const tokens: string[] = []
 
     if (typeof this.maxAge === 'number') {
       tokens.push(`${STRINGS.maxAge}=${this.maxAge}`)
@@ -174,12 +204,12 @@ class CacheControl {
   }
 }
 
-function parse(header) {
+function parse(header?: string): CacheControl {
   const cc = new CacheControl()
   return cc.parse(header)
 }
 
-function format(cc) {
+function format(cc: CacheControlValue): string {
   if (!(cc instanceof CacheControl)) {
     return CacheControl.prototype.format.call(cc)
   }
@@ -187,8 +217,4 @@ function format(cc) {
   return cc.format()
 }
 
-module.exports = {
-  CacheControl,
-  parse,
-  format,
-}
+export {CacheControl, parse, format}

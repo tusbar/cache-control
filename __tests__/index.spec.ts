@@ -1,4 +1,4 @@
-const {CacheControl, parse, format} = require('..')
+import {CacheControl, format, parse} from '../src/index'
 
 const DEFAULT_UNSET = {
   immutable: null,
