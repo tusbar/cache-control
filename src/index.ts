@@ -1,6 +1,6 @@
 const HEADER_REGEXP = /([a-zA-Z][a-zA-Z_-]*)\s*(?:=(?:"([^"]*)"|([^ \t",;]*)))?/g
 
-interface CacheControlValue {
+export interface CacheControlValue {
   maxAge?: number | null
   sharedMaxAge?: number | null
   maxStale?: boolean | null
@@ -55,7 +55,7 @@ function parseDuration(value: string | null) {
   return duration
 }
 
-class CacheControl implements CacheControlValue {
+export class CacheControl implements CacheControlValue {
   maxAge: number | null
   sharedMaxAge: number | null
   maxStale: boolean | null
@@ -204,17 +204,15 @@ class CacheControl implements CacheControlValue {
   }
 }
 
-function parse(header?: string): CacheControl {
+export function parse(header?: string): CacheControl {
   const cc = new CacheControl()
   return cc.parse(header)
 }
 
-function format(cc: CacheControlValue): string {
+export function format(cc: CacheControlValue): string {
   if (!(cc instanceof CacheControl)) {
     return CacheControl.prototype.format.call(cc)
   }
 
   return cc.format()
 }
-
-export {CacheControl, parse, format}
