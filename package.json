@@ -2,7 +2,7 @@
   "name": "@tusbar/cache-control",
   "public": true,
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Bertrand Marron <bertrand.marron@gmail.com>",
   "description": "Format and parse HTTP Cache-Control header",
   "repository": "https://github.com/tusbar/cache-control",
