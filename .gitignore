@@ -1,14 +1,5 @@
-# Logs
-*.log
-CHANGELOG.md
-
-# Cache
-.eslintcache
-.changelog
-
-# Node
-node_modules
-
-# Reports
+node_modules/
 coverage/
 reports/
+
+dist/

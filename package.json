@@ -1,59 +1,57 @@
 {
   "name": "@tusbar/cache-control",
   "public": true,
+  "license": "MIT",
   "version": "0.6.1",
+  "author": "Bertrand Marron <bertrand.marron@gmail.com>",
   "description": "Format and parse HTTP Cache-Control header",
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "scripts": {
-    "test": "jest"
-  },
+  "repository": "https://github.com/tusbar/cache-control",
   "keywords": [
     "cache-control",
     "http",
     "rfc7234"
   ],
+  "type": "module",
+  "sideEffects": false,
   "files": [
-    "index.js",
-    "index.d.ts"
+    "dist"
   ],
-  "repository": "https://github.com/tusbar/cache-control",
-  "author": "Bertrand Marron <bertrand.marron@gmail.com>",
-  "license": "MIT",
+  "source": "./src/index.ts",
+  "main": "./dist/cache-control.cjs",
+  "umd:main": "./dist/cache-control.umd.js",
+  "module": "./dist/cache-control.js",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/cache-control.cjs",
+    "default": "./dist/cache-control.modern.js"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "test": "jest",
+    "check:ts": "tsc --noEmit",
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
   "devDependencies": {
     "@bizon/semantic-release-config": "^2.0.0",
+    "@jest/types": "^29.6.1",
+    "@tsconfig/node18": "^18.2.0",
+    "@types/jest": "^29.5.3",
     "eslint-config-xo-bizon": "^2.0.0",
     "jest": "^29.6.2",
+    "microbundle": "^0.15.1",
     "semantic-release": "^21.0.7",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
     "xo": "^0.55.0"
-  },
-  "jest": {
-    "testMatch": [
-      "<rootDir>/__tests__/*.js"
-    ],
-    "transform": {},
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "index.js"
-    ],
-    "coverageReporters": [
-      "lcov",
-      "text-summary"
-    ]
   },
   "xo": {
     "extends": "xo-bizon",
     "semicolon": false,
     "space": 2,
-    "prettier": true,
-    "overrides": [
-      {
-        "files": "__tests__/*.js",
-        "envs": [
-          "jest"
-        ]
-      }
-    ]
+    "prettier": true
   },
   "prettier": {
     "printWidth": 100

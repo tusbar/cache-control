@@ -9,6 +9,7 @@ jobs:
   lint:
     name: Run linters
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Git checkout
@@ -30,9 +31,35 @@ jobs:
       - name: Run linter
         run: pnpm xo
 
+  check-ts:
+    name: Run typescript checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: "latest"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run typescript checks
+        run: pnpm check:ts
+
   test:
     name: Run tests
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Git checkout
