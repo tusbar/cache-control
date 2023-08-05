@@ -9,8 +9,8 @@ devDependencies:
     specifier: ^2.0.0
     version: 2.0.0(semantic-release@21.0.2)
   eslint-config-xo-bizon:
-    specifier: ^1.1.2
-    version: 1.1.2
+    specifier: ^2.0.0
+    version: 2.0.0
   jest:
     specifier: ^29.5.0
     version: 29.5.0
@@ -2290,9 +2290,9 @@ packages:
       eslint: 8.40.0
     dev: true
 
-  /eslint-config-xo-bizon@1.1.2:
-    resolution: {integrity: sha512-Zyyb4fuZGX6qnkz5PVO6sKqctI7h0Su8E3IaV5PhX8BoGet0GjsqsmU3AugH7THQzyFErIJXL0+fosldHwSb7g==}
-    engines: {node: '>=14'}
+  /eslint-config-xo-bizon@2.0.0:
+    resolution: {integrity: sha512-aYoqM6cVqyq7oWKjZjHmJPGT6UdepymOxdYRhDOzGJ5VvfTwN5l16XdnZbM98oGg2AAWto5z2vvuacHQVOTIaQ==}
+    engines: {node: '>=16'}
     dev: true
 
   /eslint-config-xo-typescript@0.57.0(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(eslint@8.40.0)(typescript@5.0.4):
