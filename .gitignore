@@ -1,11 +1,8 @@
 # Logs
 *.log
-npm-debug.log*
 CHANGELOG.md
 
 # Cache
-.yarn-cache
-.npm
 .eslintcache
 .changelog
 
