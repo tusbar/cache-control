@@ -27,7 +27,6 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "test": "jest",
     "check:ts": "tsc --noEmit",
     "build": "microbundle",
