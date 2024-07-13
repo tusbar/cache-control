@@ -17,9 +17,9 @@
     "dist"
   ],
   "source": "./src/index.ts",
-  "main": "./dist/cache-control.cjs",
+  "main": "./dist/cache-control.modern.js",
   "umd:main": "./dist/cache-control.umd.js",
-  "module": "./dist/cache-control.js",
+  "module": "./dist/cache-control.modern.js",
   "exports": {
     "types": "./dist/index.d.ts",
     "require": "./dist/cache-control.cjs",
