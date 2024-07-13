@@ -30,7 +30,8 @@
     "test": "jest",
     "check:ts": "tsc --noEmit",
     "build": "microbundle",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "prepare": "microbundle"
   },
   "devDependencies": {
     "@bizon/semantic-release-config": "^2.1.0",
