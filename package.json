@@ -41,7 +41,7 @@
     "jest": "^29.7.0",
     "microbundle": "^0.15.1",
     "semantic-release": "^24.1.0",
-    "ts-jest": "^29.2.4",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "xo": "^0.59.3"
