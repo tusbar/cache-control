@@ -3,7 +3,7 @@
 > Format and parse HTTP Cache-Control header
 
 [![npm version](https://badgen.net/npm/v/@tusbar/cache-control)](https://www.npmjs.com/package/@tusbar/cache-control)
-[![codecov](https://badgen.net/codecov/c/github/tusbar/cache-control)](https://codecov.io/gh/tusbar/cache-control)
+[![codecov](https://codecov.io/gh/tusbar/cache-control/graph/badge.svg?token=O8MvGFz46p)](https://codecov.io/gh/tusbar/cache-control)
 [![XO code style](https://badgen.net/badge/code%20style/XO/cyan)](https://github.com/xojs/xo)
 
 ## CI
