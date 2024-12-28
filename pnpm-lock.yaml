@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@bizon/semantic-release-config':
-        specifier: ^3.0.0
-        version: 3.0.0(semantic-release@24.2.0(typescript@5.5.4))
+        specifier: ^3.0.1
+        version: 3.0.1(semantic-release@24.2.0(typescript@5.5.4))
       '@jest/types':
         specifier: ^29.6.3
         version: 29.6.3
@@ -701,8 +701,8 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  '@bizon/semantic-release-config@3.0.0':
-    resolution: {integrity: sha512-X2L618JhqRKiMejnXXnNY7z1SLhcO5uLlHsUv3yLDChmJfcYsywAhobkL8U+0AgGivh31KlPnyKeLGVKzBUPjw==}
+  '@bizon/semantic-release-config@3.0.1':
+    resolution: {integrity: sha512-91B2OCmqFLGjrstzQlffEAz8gr7Foo3pon49fsvHvpEOstttqZjwRrGUT3K186jm6E9alY+kNeZT8pmL9Z1dcw==}
     engines: {node: '>=20'}
 
   '@colors/colors@1.5.0':
@@ -989,14 +989,14 @@ packages:
     peerDependencies:
       semantic-release: '>=18.0.0'
 
-  '@semantic-release/github@10.3.3':
-    resolution: {integrity: sha512-zrEdwRZ7ZTEM2JYhF4E+ZgApIfv6iHfQBnnAP1g2LqYZtj56+qWEUo/xW36cbZRDOweejxU40PGZckx6TZzFmg==}
-    engines: {node: '>=20.8.1'}
-    peerDependencies:
-      semantic-release: '>=20.1.0'
-
   '@semantic-release/github@11.0.0':
     resolution: {integrity: sha512-Uon6G6gJD8U1JNvPm7X0j46yxNRJ8Ui6SgK4Zw5Ktu8RgjEft3BGn+l/RX1TTzhhO3/uUcKuqM+/9/ETFxWS/Q==}
+    engines: {node: '>=20.8.1'}
+    peerDependencies:
+      semantic-release: '>=24.1.0'
+
+  '@semantic-release/github@11.0.1':
+    resolution: {integrity: sha512-Z9cr0LgU/zgucbT9cksH0/pX9zmVda9hkDPcgIE0uvjMQ8w/mElDivGjx1w1pEQ+MuQJ5CBq3VCF16S6G4VH3A==}
     engines: {node: '>=20.8.1'}
     peerDependencies:
       semantic-release: '>=24.1.0'
@@ -5584,11 +5584,11 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@bizon/semantic-release-config@3.0.0(semantic-release@24.2.0(typescript@5.5.4))':
+  '@bizon/semantic-release-config@3.0.1(semantic-release@24.2.0(typescript@5.5.4))':
     dependencies:
       '@semantic-release/commit-analyzer': 13.0.0(semantic-release@24.2.0(typescript@5.5.4))
       '@semantic-release/git': 10.0.1(semantic-release@24.2.0(typescript@5.5.4))
-      '@semantic-release/github': 10.3.3(semantic-release@24.2.0(typescript@5.5.4))
+      '@semantic-release/github': 11.0.1(semantic-release@24.2.0(typescript@5.5.4))
       '@semantic-release/npm': 12.0.1(semantic-release@24.2.0(typescript@5.5.4))
       '@semantic-release/release-notes-generator': 14.0.1(semantic-release@24.2.0(typescript@5.5.4))
     transitivePeerDependencies:
@@ -6022,7 +6022,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@10.3.3(semantic-release@24.2.0(typescript@5.5.4))':
+  '@semantic-release/github@11.0.0(semantic-release@24.2.0(typescript@5.5.4))':
     dependencies:
       '@octokit/core': 6.1.2
       '@octokit/plugin-paginate-rest': 11.3.0(@octokit/core@6.1.2)
@@ -6044,7 +6044,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@11.0.0(semantic-release@24.2.0(typescript@5.5.4))':
+  '@semantic-release/github@11.0.1(semantic-release@24.2.0(typescript@5.5.4))':
     dependencies:
       '@octokit/core': 6.1.2
       '@octokit/plugin-paginate-rest': 11.3.0(@octokit/core@6.1.2)

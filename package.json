@@ -33,7 +33,7 @@
     "dev": "microbundle watch"
   },
   "devDependencies": {
-    "@bizon/semantic-release-config": "^3.0.0",
+    "@bizon/semantic-release-config": "^3.0.1",
     "@jest/types": "^29.6.3",
     "@tsconfig/node22": "^22.0.0",
     "@types/jest": "^29.5.14",
