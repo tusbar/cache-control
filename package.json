@@ -44,7 +44,7 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
-    "xo": "^0.59.3"
+    "xo": "^0.60.0"
   },
   "xo": {
     "extends": "xo-bizon",
