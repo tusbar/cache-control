@@ -43,7 +43,7 @@
     "semantic-release": "^24.2.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2",
+    "typescript": "^5.8.2",
     "xo": "^0.59.3"
   },
   "xo": {
