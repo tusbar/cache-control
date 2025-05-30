@@ -39,7 +39,7 @@
     "dev": "tsup --watch"
   },
   "devDependencies": {
-    "@bizon/semantic-release-config": "^3.0.1",
+    "@bizon/semantic-release-config": "^3.0.2",
     "@jest/types": "^29.6.3",
     "@swc/core": "^1.11.29",
     "@swc/jest": "^0.2.38",
