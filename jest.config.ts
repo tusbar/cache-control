@@ -1,12 +1,14 @@
 import {type Config} from '@jest/types'
 
 const config: Config.InitialOptions = {
-  preset: 'ts-jest',
   testEnvironment: 'node',
+  transform: {
+    '^.+\\.(t|j)sx?$': '@swc/jest',
+  },
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.ts'],
-  coverageReporters: ['lcov', 'text-summary'],
+  coverageReporters: ['text-summary', 'cobertura'],
 }
 
 export default config
