@@ -17,20 +17,26 @@
     "dist"
   ],
   "source": "./src/index.ts",
-  "main": "./dist/cache-control.cjs",
-  "umd:main": "./dist/cache-control.umd.js",
-  "module": "./dist/cache-control.js",
-  "exports": {
-    "types": "./dist/index.d.ts",
-    "require": "./dist/cache-control.cjs",
-    "default": "./dist/cache-control.modern.js"
-  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
   "scripts": {
     "test": "jest",
     "check:ts": "tsc --noEmit",
-    "build": "microbundle",
-    "dev": "microbundle watch"
+    "build": "tsup",
+    "dev": "tsup --watch"
   },
   "devDependencies": {
     "@bizon/semantic-release-config": "^3.0.1",
@@ -39,10 +45,10 @@
     "@types/jest": "^29.5.14",
     "eslint-config-xo-bizon": "^3.0.3",
     "jest": "^29.7.0",
-    "microbundle": "^0.15.1",
     "semantic-release": "^24.2.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
+    "tsup": "^8.5.0",
     "typescript": "^5.7.2",
     "xo": "^0.59.3"
   },
@@ -57,6 +63,17 @@
   },
   "release": {
     "extends": "@bizon/semantic-release-config"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "sourcemap": true,
+    "dts": true
   },
   "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
 }
