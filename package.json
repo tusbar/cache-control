@@ -51,6 +51,7 @@
     "@types/node": "^24.10.8",
     "eslint-config-xo-bizon": "^4.2.0",
     "jest": "^30.0.0",
+    "jest-junit": "^16.0.0",
     "semantic-release": "^25.0.2",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.0",

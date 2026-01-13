@@ -19,3 +19,4 @@ updates:
           - "@jest/*"
           - "@types/jest"
           - "jest"
+          - "jest-junit"
