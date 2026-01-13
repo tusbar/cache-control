@@ -44,7 +44,7 @@
   "devDependencies": {
     "@bizon/semantic-release-config": "^3.1.0",
     "@jest/types": "^30.0.5",
-    "@swc/core": "^1.13.3",
+    "@swc/core": "^1.15.8",
     "@swc/jest": "^0.2.38",
     "@tsconfig/node24": "^24.0.3",
     "@types/jest": "^30.0.0",
