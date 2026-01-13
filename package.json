@@ -5,7 +5,10 @@
   "version": "1.0.2",
   "author": "Bertrand Marron <bertrand.marron@gmail.com>",
   "description": "Format and parse HTTP Cache-Control header",
-  "repository": "https://github.com/tusbar/cache-control",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tusbar/cache-control.git"
+  },
   "keywords": [
     "cache-control",
     "http",
@@ -43,14 +46,15 @@
     "@jest/types": "^30.0.5",
     "@swc/core": "^1.13.3",
     "@swc/jest": "^0.2.38",
-    "@tsconfig/node22": "^22.0.0",
+    "@tsconfig/node24": "^24.0.3",
     "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.8",
     "eslint-config-xo-bizon": "^3.0.3",
     "jest": "^30.0.0",
     "semantic-release": "^24.2.5",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
-    "typescript": "^5.7.2",
+    "typescript": "^5.8.3",
     "xo": "^0.59.3"
   },
   "xo": {
