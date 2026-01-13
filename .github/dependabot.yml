@@ -11,3 +11,11 @@ updates:
     versioning-strategy: increase
     schedule:
       interval: weekly
+    groups:
+      jest:
+        patterns:
+          - "@swc/core"
+          - "@swc/jest"
+          - "@jest/*"
+          - "@types/jest"
+          - "jest"
