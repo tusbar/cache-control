@@ -55,7 +55,7 @@
     "semantic-release": "^25.0.2",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.3",
     "xo": "^1.2.3"
   },
   "release": {
