@@ -5,6 +5,9 @@ const config: Config.InitialOptions = {
   transform: {
     '^.+\\.(t|j)sx?$': '@swc/jest',
   },
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.ts'],

@@ -1,4 +1,4 @@
-import {CacheControl, format, parse} from '../src/index'
+import {CacheControl, format, parse} from '../src/index.js'
 
 const DEFAULT_UNSET = {
   immutable: null,
