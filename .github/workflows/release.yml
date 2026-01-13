@@ -4,6 +4,9 @@ on: [workflow_dispatch]
 
 concurrency: release
 
+permissions:
+  id-token: write
+
 jobs:
   release:
     name: Run semantic release
@@ -28,6 +31,5 @@ jobs:
 
       - name: Run semantic release
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: pnpm semantic-release
