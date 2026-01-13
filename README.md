@@ -1,10 +1,10 @@
 # cache-control
 
-> Format and parse HTTP Cache-Control header
-
-[![npm version](https://badgen.net/npm/v/@tusbar/cache-control)](https://www.npmjs.com/package/@tusbar/cache-control)
+[![npm version](https://img.shields.io/npm/v/@tusbar/cache-control)](https://www.npmjs.com/package/@tusbar/cache-control)
 [![codecov](https://codecov.io/gh/tusbar/cache-control/graph/badge.svg?token=O8MvGFz46p)](https://codecov.io/gh/tusbar/cache-control)
-[![XO code style](https://badgen.net/badge/code%20style/XO/cyan)](https://github.com/xojs/xo)
+[![XO code style](https://img.shields.io/badge/code_style-xo-cyan)](https://github.com/xojs/xo)
+
+Format and parse HTTP Cache-Control header
 
 ## CI
 
@@ -24,7 +24,7 @@ This library exposes a `CacheControl` class and two shortcut methods: `parse()` 
 ### `parse(header)`
 
 ```js
-const {parse} = require('@tusbar/cache-control')
+const { parse } = require("@tusbar/cache-control");
 ```
 
 `parse()` takes a `Cache-Control` HTTP header value and returns a `CacheControl` instance.
@@ -54,7 +54,7 @@ CacheControl {
 ### `format(cacheControl)`
 
 ```js
-const {format} = require('@tusbar/cache-control')
+const { format } = require("@tusbar/cache-control");
 ```
 
 `format()` takes a `CacheControl` instance (or similar object) and returns a `Cache-Control` HTTP header value.
@@ -68,10 +68,13 @@ max-age=31536000, public
 ## Example usage
 
 ```js
-res.setHeader('Cache-Control', format({
-  public: true,
-  immutable: true
-}))
+res.setHeader(
+  "Cache-Control",
+  format({
+    public: true,
+    immutable: true,
+  }),
+);
 ```
 
 ## FAQ
@@ -80,16 +83,13 @@ res.setHeader('Cache-Control', format({
 
 None of the existing libraries focus on just parsing the `Cache-Control` headers. There are some that expose Express (or connect-like) middlewares, and some unmaintained other ones that do rudimentary parsing of the header. The idea of this module is to parse the header according to the RFC with no further analysis or integration.
 
-
 ## See also
 
 - [`cachecontrol`](https://github.com/pquerna/cachecontrol): Golang HTTP Cache-Control Parser and Interpretation
 
-
 ## License
 
 MIT
-
 
 ## Miscellaneous
 
