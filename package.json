@@ -12,6 +12,9 @@
   "keywords": [
     "cache-control",
     "http",
+    "rfc9111",
+    "rfc8246",
+    "rfc5861",
     "rfc7234"
   ],
   "type": "module",
