@@ -17,6 +17,5 @@ updates:
           - "@swc/core"
           - "@swc/jest"
           - "@jest/*"
-          - "@types/jest"
           - "jest"
           - "jest-junit"
