@@ -112,47 +112,25 @@ function parseDuration(value: string | null) {
  * while duration directives that were absent remain `null`.
  */
 export class CacheControl implements CacheControlValue {
-  maxAge: number | null
-  sharedMaxAge: number | null
-  maxStale: boolean | null
-  maxStaleDuration: number | null
-  minFresh: number | null
-  immutable: boolean | null
-  mustRevalidate: boolean | null
-  mustUnderstand: boolean | null
-  noCache: boolean | null
-  noCacheFields: string[] | null
-  noStore: boolean | null
-  noTransform: boolean | null
-  onlyIfCached: boolean | null
-  private: boolean | null
-  privateFields: string[] | null
-  proxyRevalidate: boolean | null
-  public: boolean | null
-  staleWhileRevalidate: number | null
-  staleIfError: number | null
-
-  constructor() {
-    this.maxAge = null
-    this.sharedMaxAge = null
-    this.maxStale = null
-    this.maxStaleDuration = null
-    this.minFresh = null
-    this.immutable = null
-    this.mustRevalidate = null
-    this.mustUnderstand = null
-    this.noCache = null
-    this.noCacheFields = null
-    this.noStore = null
-    this.noTransform = null
-    this.onlyIfCached = null
-    this.private = null
-    this.privateFields = null
-    this.proxyRevalidate = null
-    this.public = null
-    this.staleWhileRevalidate = null
-    this.staleIfError = null
-  }
+  maxAge: number | null = null
+  sharedMaxAge: number | null = null
+  maxStale: boolean | null = null
+  maxStaleDuration: number | null = null
+  minFresh: number | null = null
+  immutable: boolean | null = null
+  mustRevalidate: boolean | null = null
+  mustUnderstand: boolean | null = null
+  noCache: boolean | null = null
+  noCacheFields: string[] | null = null
+  noStore: boolean | null = null
+  noTransform: boolean | null = null
+  onlyIfCached: boolean | null = null
+  private: boolean | null = null
+  privateFields: string[] | null = null
+  proxyRevalidate: boolean | null = null
+  public: boolean | null = null
+  staleWhileRevalidate: number | null = null
+  staleIfError: number | null = null
 
   parse(header: string | undefined): this {
     if (!header || header.length === 0) {
