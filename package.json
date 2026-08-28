@@ -52,7 +52,7 @@
     "@swc/jest": "^0.2.39",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.12.4",
-    "eslint-config-xo-bizon": "^4.3.0",
+    "eslint-config-xo-bizon": "^4.4.0",
     "jest": "^30.4.2",
     "jest-junit": "^17.0.0",
     "semantic-release": "^25.0.3",
